@@ -192,7 +192,7 @@ summary(lm_exp)
 hist(log(testLong$Time_spent_sec))
 ```
 
-Since Avg_Spacing_Days and days_studying weren't significant predictors, we will drop them from the model. 
+Since Avg_Spacing_Days and days_studying were not significant predictors, we will drop them from the model. 
 ```{r}
 lm_expCleaned <- lmer(Score ~ condition + Time_spent_sec + (1|Student), data = testLong)
 summary(lm_expCleaned)
